@@ -106,7 +106,7 @@ export interface AMapOptions{
 /**
  * @interface AMapProps AMap属性
  */
-export interface AMapProps extends AMapOptions{
+export interface AMapProps extends AMapOptions,ReactNative.ViewProperties{
     /**
      * @event onMoved 用户移动的地图的事件
      * @param {OnMovedEvent} e
@@ -269,6 +269,7 @@ export interface LocationResult extends PoiSearchResult{
     gps:boolean
 }
 
+
 export default class AMap extends React.Component<AMapProps>{
 
     static propTypes:any= {
@@ -288,7 +289,6 @@ export default class AMap extends React.Component<AMapProps>{
         enableEnableCenterMarker:PropTypes.bool,
         onMoved: PropTypes.func,
     };
-
     constructor(props:any) {
         super(props)
     }

@@ -1,5 +1,6 @@
 /// <reference types="react" />
 import * as React from 'react';
+import * as ReactNative from 'react-native';
 export declare const AMapManager: any;
 export declare const AMapLocation: any;
 /**
@@ -96,7 +97,7 @@ export interface AMapOptions {
 /**
  * @interface AMapProps AMap属性
  */
-export interface AMapProps extends AMapOptions {
+export interface AMapProps extends AMapOptions, ReactNative.ViewProperties {
     /**
      * @event onMoved 用户移动的地图的事件
      * @param {OnMovedEvent} e
