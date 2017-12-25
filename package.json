@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "16.0.0",
     "prop-types": "15.6.0",
     "react-native": "0.51.0"
