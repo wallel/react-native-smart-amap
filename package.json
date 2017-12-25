@@ -2,6 +2,7 @@
   "name": "rn-amap",
   "version": "0.0.1",
   "main": "dist/AMap.js",
+  "types":"dist/AMap.d.ts",
   "scripts": {
     "compile": "tsc"
   },
