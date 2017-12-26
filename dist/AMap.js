@@ -63,4 +63,3 @@ AMap.propTypes = Object.assign({}, ReactNative.View.propTypes, { center: PropTyp
     }), marker: PropTypes.number, zoomLevel: PropTypes.number, enableMarker: PropTypes.bool, enableZoomControls: PropTypes.bool, enableZoomGestures: PropTypes.bool, enableScaleControls: PropTypes.bool, enableCompass: PropTypes.bool, enableMyLocation: PropTypes.bool, enableEnableCenterMarker: PropTypes.bool, onMoved: PropTypes.func });
 exports.default = AMap;
 const NativeAMap = react_native_1.Platform.OS == 'ios' ? react_native_1.View : react_native_1.requireNativeComponent('AMapView', AMap);
-//# sourceMappingURL=AMap.js.map

@@ -161,10 +161,11 @@ export interface ResultError{
      */
     desc:string
 }
+
 /**
  * POI搜索结果
  */
-export interface PoiSearchResult{
+export interface PoiItem{
     /**
      * @filed uid POIitem唯一ID
      */
@@ -185,8 +186,19 @@ export interface PoiSearchResult{
      *@filed province 省份
      */
     province?:number
+}
+
+
+/**
+ * POI搜索结果
+ */
+export interface PoiSearchResult{
     /**
-     *@field error 错误信息
+     * @field result 搜索结果
+     */
+    result?:PoiItem[]
+    /**
+     * @field error 错误信息
      */
     error?:ResultError
 }
@@ -260,15 +272,22 @@ export interface LocationOptions{
 }
 
 /**
- * 定位结果
+ *@interface  LocationItem 定位结果
  */
-export interface LocationResult extends PoiSearchResult{
+export interface LocationItem extends PoiItem{
     /**
      * @field gps 定位结果是否是gps定位的,gps定位结果只有经纬度
      */
     gps:boolean
 }
 
+/**
+ * @interface LocationResult 定位结果
+ */
+export interface LocationResult{
+    result?:LocationItem
+    error?:ResultError
+}
 
 export default class AMap extends React.Component<AMapProps>{
 
