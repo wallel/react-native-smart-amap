@@ -88,6 +88,7 @@ public class AMapView extends FrameLayout implements AMap.OnCameraChangeListener
     @Override
     protected void onDetachedFromWindow() {
         this.removeView(mapView);
+        this.removeView(centerView);
         mapView.onDestroy();
         super.onDetachedFromWindow();
     }
@@ -134,6 +135,7 @@ public class AMapView extends FrameLayout implements AMap.OnCameraChangeListener
 
         aMap.setOnCameraChangeListener(this);
         aMap.setMyLocationEnabled(enableMyLocation);
+        Log.d("AMapView","setMapOptions=>enableZoomControls:" + enableZoomControls + " zoomLevel:" + zoomLevel);
     }
 
     @Override

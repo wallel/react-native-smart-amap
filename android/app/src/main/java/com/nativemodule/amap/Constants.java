@@ -31,6 +31,8 @@ public class Constants {
     public static final String POI_SEARCH_TYPES             ="types";
     // 搜索关键字
     public static final String POI_SEARCH_KEYWORDS          ="keywords";
+    // 城市
+    public static final String POI_SEARCH_CITY              ="city";
     // 第几页
     public static final String POI_SEARCH_PAGE              ="page";
     // 个数

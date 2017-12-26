@@ -44,45 +44,54 @@ public class AMapViewManager extends ViewGroupManager<AMapView> {
 
         LatLng latLng = new LatLng(lat,lng);
         view.setLatLng(latLng);
+        Log.d("AMapView","setLatLng:( " + lat + ", " + lng + ")");
     }
 
     @ReactProp(name="zoomLevel",defaultDouble=18.0)
     public void setZoomLevel(AMapView view,double zoomLevel) {
+        Log.d("AMapView","setZoomLevel: " + zoomLevel);
         view.setZoomLevel(zoomLevel);
     }
 
     @ReactProp(name="enableZoomControls",defaultBoolean = false)
     public void setEnableZoomControls(AMapView view,boolean enableZoomControls) {
+        Log.d("AMapView","setEnableZoomControls: " + enableZoomControls);
         view.setEnableZoomControls(enableZoomControls);
     }
 
     @ReactProp(name="enableZoomGestures",defaultBoolean = true)
     public void setEnableZoomGestures(AMapView view,boolean enableZoomGestures) {
+        Log.d("AMapView","setEnableZoomGestures: " + enableZoomGestures);
         view.setEnableZoomGestures(enableZoomGestures);
     }
 
     @ReactProp(name="enableScaleControls",defaultBoolean = false)
     public void setEnableScaleControls(AMapView view,boolean enableScaleControls) {
+        Log.d("AMapView","setEnableScaleControls: " + enableScaleControls);
         view.setEnableScaleControls(enableScaleControls);
     }
 
     @ReactProp(name="enableCompass",defaultBoolean = false)
     public void setEnableCompass(AMapView view,boolean enableCompass) {
+        Log.d("AMapView","setEnableCompass: " + enableCompass);
         view.setEnableCompass(enableCompass);
     }
 
     @ReactProp(name="enableMyLocation",defaultBoolean = false)
     public void setEnableMyLocation(AMapView view,boolean enableMyLocation) {
+        Log.d("AMapView","setEnableMyLocation: " + enableMyLocation);
         view.setEnableMyLocation(enableMyLocation);
     }
 
     @ReactProp(name="enableEnableCenterMarker",defaultBoolean = true)
     public void setEnableCenterMarker(AMapView view,boolean enableCenterMarker) {
+        Log.d("AMapView","setEnableCenterMarker: " + enableCenterMarker);
         view.setEnableCenterMarker(enableCenterMarker);
     }
 
     @ReactProp(name="marker",defaultFloat = BitmapDescriptorFactory.HUE_AZURE)
     public void setMarker(AMapView view,float marker) {
+        Log.d("AMapView","setMarker: " + marker);
         view.setMarker(marker);
     }
 

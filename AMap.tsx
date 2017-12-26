@@ -143,9 +143,14 @@ export interface PoiSearchOptions{
      */
     radius?:number
     /**
-     * @field coordinate 检索范围中心点坐标
+     * @field coordinate 检索范围中心点坐标,附近搜索
      */
-    coordinate:Coordinate
+    coordinate?:Coordinate
+
+    /**
+     * @field city 城市 city按城市搜索
+     */
+    city?:string
 }
 
 /**

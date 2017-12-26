@@ -96,8 +96,12 @@ public class AMapModule  extends ReactContextBaseJavaModule implements PoiSearch
         if (params.hasKey(Constants.POI_SEARCH_KEYWORDS)){
             keywords = params.getString(Constants.POI_SEARCH_KEYWORDS);
         }
+        String city = null;
+        if (params.hasKey(Constants.POI_SEARCH_CITY)){
+            city = params.getString(Constants.POI_SEARCH_CITY);
+        }
 
-        PoiSearch.Query query = new PoiSearch.Query(keywords, types);
+        PoiSearch.Query query = new PoiSearch.Query(keywords, types,city);
 
         if(params.hasKey(Constants.POI_SEARCH_COUNT)) {
             int offset = params.getInt(Constants.POI_SEARCH_COUNT);
@@ -118,11 +122,12 @@ public class AMapModule  extends ReactContextBaseJavaModule implements PoiSearch
                 radius = params.getInt(Constants.POI_SEARCH_RADIUS);
             }
             poiSearch.setBound(new PoiSearch.SearchBound(new LatLonPoint(latitude, longitude), radius));
+        }else{
+            poiSearch.setBound(null);
         }
         Log.d("AMapView",
                 "searchPoi(types:" + types + " keyword:" + keywords + " count:" + query.getPageSize()
-                        + " page:" + query.getPageNum() + " location:"
-                        + poiSearch.getBound().getCenter().getLatitude() + ", " + poiSearch.getBound().getCenter().getLongitude());
+                        + " page:" + query.getPageNum());
         poiSearch.setOnPoiSearchListener(this);
         poiSearch.searchPOIAsyn();
     }
