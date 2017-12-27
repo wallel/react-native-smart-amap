@@ -168,15 +168,15 @@ export interface PoiItem {
     /**
      * @filed address 地址
      */
-    address?: number;
+    address?: string;
     /**
      * @filed city 城市
      */
-    city?: number;
+    city?: string;
     /**
      *@filed province 省份
      */
-    province?: number;
+    province?: string;
     /**
      * @field coordinate 经纬度
      */
