@@ -191,6 +191,10 @@ export interface PoiItem{
      *@filed province 省份
      */
     province?:number
+    /**
+     * @field coordinate 经纬度
+     */
+    coordinate?: Coordinate;
 }
 
 
