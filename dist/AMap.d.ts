@@ -272,8 +272,7 @@ export interface LocationItem extends PoiItem {
 /**
  * @interface LocationResult 定位结果
  */
-export interface LocationResult {
-    result?: LocationItem;
+export interface LocationResult extends LocationItem{
     error?: ResultError;
 }
 export default class AMap extends React.Component<AMapProps> {
