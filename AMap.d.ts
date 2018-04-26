@@ -21,8 +21,8 @@ export interface AMapOptions{
     showsUserLocation?:boolean
     userTrackingMode?:number
     centerCoordinate?:Coordinate
-    zoomLevel:number
-    centerMarker:string
+    zoomLevel?:number
+    centerMarker?:string
 }
 
 export interface AMapProps extends ReactNative.ViewProperties{
