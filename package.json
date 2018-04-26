@@ -1,24 +1,26 @@
 {
-  "name": "rn-amap",
-  "version": "0.0.1",
-  "main": "dist/AMap.js",
-  "types":"dist/AMap.d.ts",
+  "name": "react-native-smart-amap",
+  "version": "1.0.7",
+  "description": "A AMap Library for React Native apps.",
+  "main": "AMap.js",
   "scripts": {
-    "compile": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "react": ">=16.0.0",
-    "prop-types": "15.6.0",
-    "react-native": ">=0.50.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-component/react-native-smart-amap.git"
   },
-  "devDependencies": {
-    "@types/prop-types": "^15.5.2",
-    "babel-jest": "22.0.3",
-    "babel-preset-react-native": "4.0.0",
-    "jest": "22.0.3",
-    "react-test-renderer": "16.0.0"
+  "keywords": [
+    "react-native",
+    "smart",
+    "map",
+    "amap",
+    "component"
+  ],
+  "author": "HISAME SHIZUMARU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-component/react-native-smart-amap/issues"
   },
-  "jest": {
-    "preset": "react-native"
-  }
+  "homepage": "https://github.com/react-native-component/react-native-smart-amap#readme"
 }
