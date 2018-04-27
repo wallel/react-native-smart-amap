@@ -7,7 +7,7 @@ export interface Coordinate {
 }
 
 export interface OnMovedEvent {
-    nativeEvent: Coordinate;
+    nativeEvent: {data:{centerCoordinate:Coordinate}};
 }
 
 export interface Frame {
@@ -21,10 +21,31 @@ export interface AMapOptions{
     showsUserLocation?:boolean
     userTrackingMode?:number
     centerCoordinate?:Coordinate
-    zoomLevel?:number
-    centerMarker?:string
+    zoomLevel:number
+    centerMarker:string
 }
+export interface PoiItem{
+    uid:string
+    name:string
+    address:string
+    adCode:string
+    latitude:number
+    longitude:number
+    district?:string
+    adName?:string
+    cityCode?:string
+    cityName?:string
+    distance?:number
+    provinceCode?:string
+    provinceName?:string
+    tel?:string
+    type?:string
 
+}
+export interface PoiSearchResult {
+    searchResultList?:PoiItem[]
+    error?:{code:string}
+}
 export interface AMapProps extends ReactNative.ViewProperties{
     options:AMapOptions;
     onDidMoveByUser:(e:OnMovedEvent)=>any;
@@ -32,7 +53,7 @@ export interface AMapProps extends ReactNative.ViewProperties{
 export default class AMap extends React.Component<AMapProps>{
     render():JSX.Element;
     setOptions(options:AMapOptions):void;
-    searchPoiByCenterCoordinate(params):void
+    searchPoiByCenterCoordinate(params:any):void
     setCenterCoordinate(coordinate:Coordinate):void
-    searchLocation(value):void
+    searchLocation(value:any):void
 }
